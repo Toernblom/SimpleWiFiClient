@@ -43,6 +43,7 @@ simpleWiFiClient.init("ssid","password");
 simpleWiFiClient.attach(OnRecieved);
 ```
 
+#### Method for callback
 ```
 void OnRecieved(String message) {
   Serial.println(message);
