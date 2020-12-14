@@ -30,21 +30,21 @@ Make sure to have compatible hardware board installed.
 ## How to - Arduino
 
 #### Include and create instance
-```
-include <SimpleWiFiClient.h>
+```cpp
+#include <SimpleWiFiClient.h>
 SimpleWiFiClient simpleWiFiClient;
 ```
 
 
 #### Setup
 
-```
+```cpp
 simpleWiFiClient.init("ssid","password");
 simpleWiFiClient.attach(OnRecieved);
 ```
 
 #### Method for callback
-```
+```cpp
 void OnRecieved(String message) {
   Serial.println(message);
 }
@@ -52,7 +52,7 @@ void OnRecieved(String message) {
 
 #### Loop
 
-```
+```cpp
 simpleWiFiClient.run();
 ```
 
