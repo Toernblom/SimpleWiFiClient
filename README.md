@@ -1,9 +1,9 @@
 # SimpleWiFiClient
  A simple low latency UDP arduino client.
 
-## Version 0.5.0
+## Version 1.0.0
 
-Initial beta release.
+Initial release.
 
 ## Intro
 
