@@ -13,7 +13,7 @@ Initial release.
 
 - ESP8266
 
-- Soon ESP32, Arduino nano 33 IOT.
+- Arduino nano 33 IOT.
 
 
 
