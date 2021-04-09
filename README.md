@@ -1,6 +1,10 @@
 # SimpleWiFiClient
  A simple low latency UDP arduino client.
 
+## Version 1.0.5 
+
+Added Nano 33 IOT
+
 ## Version 1.0.0
 
 Initial release.
@@ -13,9 +17,7 @@ Initial release.
 
 - ESP8266
 
-- Arduino nano 33 IOT.
-
-
+- Nano 33 IOT
 
 
 #### Installation
