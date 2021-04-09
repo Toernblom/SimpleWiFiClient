@@ -10,7 +10,7 @@ class SimpleWiFiClient
     void run();
     void attach(m_cb act);
     void invoke(String message);
-    String ip;
+    IPAddress ip;
   private:
     String message; 
     m_cb action;

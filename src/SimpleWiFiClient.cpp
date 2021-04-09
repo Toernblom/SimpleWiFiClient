@@ -1,23 +1,34 @@
 #include "Arduino.h"
 #include "SimpleWiFiClient.h"
+
+#if defined(ARDUINO_SAMD_NANO_33_IOT)
+#include <WiFiNINA.h> 
+#elif defined(esp8266)
 #include <ESP8266WiFi.h>
+#endif
+
+
 #include <WiFiUdp.h>
-
-
 
 SimpleWiFiClient::SimpleWiFiClient() {
 }
 
 void SimpleWiFiClient::init(char* ssid, char* password) {
-  WiFi.mode(WIFI_STA);
+  #if defined(esp8266)
+    WiFi.mode(WIFI_STA);
+  #endif
+
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
   }
-  wifi_set_sleep_type(NONE_SLEEP_T);
+  #if defined(esp8266)
+    wifi_set_sleep_type(NONE_SLEEP_T);
+  #endif
   Udp.begin(localUdpPort);
-  ip = WiFi.localIP().toString().c_str();
+  ip = WiFi.localIP();
 }
+
 void SimpleWiFiClient::run() {
   int packetSize = Udp.parsePacket();
   
